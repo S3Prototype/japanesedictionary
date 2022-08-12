@@ -1,9 +1,10 @@
 import fs from "fs";
 import { promisify } from "util";
+import type DictionaryRoot from "../types/DictionaryRoot";
 
 const readFile = promisify(fs.readFile);
 
-const getWords = async () => {
+export const getDictionary = async (): Promise<DictionaryRoot | undefined> => {
   try {
     return JSON.parse(
       await readFile("./data/language-dictionary.json", "utf8")
@@ -12,5 +13,3 @@ const getWords = async () => {
     console.log("Error ", err);
   }
 };
-
-export default getWords;
