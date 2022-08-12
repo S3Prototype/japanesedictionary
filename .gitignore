@@ -1,6 +1,8 @@
 node_modules
 notes
-thoughts
+thoughts.txt
 .env
 .env.*
 data/language-dictionary.json
+*/data/language-dictionary.json
+language-dictionary.json
