@@ -3,6 +3,7 @@ import express from "express";
 import https from "https";
 import http from "http";
 const app = express();
+
 app.get("/", async (req: any, res: any) => {
   const words: any = await getWords();
   // console.log(words.version);
